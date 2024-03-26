@@ -53,34 +53,6 @@ class MainActivity : AppCompatActivity() {
         fetchPokemonData(url, imageView, textView, strengthTextView)
     }
 
-    private fun fetchPokemonData(url: String, imageView: ImageView, textView: TextView) {
-        client.get(url, object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Headers?, response: JSON?) {
-                val pokemonName = response?.jsonObject?.getString("name")
-                val imageUrl = response?.jsonObject?.getJSONObject("sprites")?.getString("front_default")
-
-                pokemonName?.let {
-                    textView.text = it.capitalize(Locale.getDefault())
-                }
-
-                imageUrl?.let {
-                    Glide.with(this@MainActivity)
-                        .load(it)
-                        .into(imageView)
-                }
-            }
-
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                errorResponse: String?,
-                throwable: Throwable?
-            ) {
-                Log.e("Pokemon API", "Failed to fetch Pokemon: $errorResponse")
-            }
-        })
-
-    }
     private fun fetchPokemonData(url: String, imageView: ImageView, textView: TextView, strengthTextView: TextView) {
         client.get(url, object : JsonHttpResponseHandler() {
             override fun onSuccess(statusCode: Int, headers: Headers?, response: JSON?) {
