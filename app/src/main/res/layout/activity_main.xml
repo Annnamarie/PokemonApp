@@ -10,13 +10,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="97dp"
-        android:text="NEXT"
+        android:layout_marginBottom="36dp"
         android:gravity="center"
+        android:text="NEXT"
         app:layout_constraintBottom_toTopOf="@+id/pokeNameInput"
-        app:layout_constraintStart_toStartOf="@+id/pokemonName"
-        app:layout_constraintTop_toBottomOf="@+id/pokemonName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/strength" />
 
     <ImageView
         android:id="@+id/pokeImg"
@@ -26,8 +26,8 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="21dp"
-        android:src="@drawable/pokemon"
         android:gravity="center"
+        android:src="@drawable/pokemon"
         app:layout_constraintBottom_toTopOf="@+id/pokemonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="text"
         android:text=""
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/searchButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,13 +49,13 @@
 
     <TextView
         android:id="@+id/pokemonName"
-        android:layout_width="172dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="21dp"
-        android:text="Pokemon"
-        android:hint="Pokemon Name"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="14dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:hint="Pokemon Name"
+        android:text="Pokemon"
+        app:layout_constraintBottom_toTopOf="@+id/strength"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokeImg" />
@@ -73,4 +73,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/pokeImg"
         app:layout_constraintTop_toBottomOf="@+id/pokeNameInput" />
+
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="165dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="28dp"
+        android:text="Strength"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
