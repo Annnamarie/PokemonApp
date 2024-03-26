@@ -42,7 +42,7 @@ GIF created with **ScreenToGif and Imgur**
 
 ## Notes
 
-Here's a place for any other notes on the app, it's creation process, or what you learned this unit!
+I learned how to use API into the project. I parsed the information to filter what I need which were the name, img, and strength. I originnaly wanted to use Marvel API which called for a private and public key but I kept having issues. I will continue to explore and try to get that to work.
 
 ## License
 
